@@ -2,10 +2,11 @@ import nucleus from '@nebula.js/nucleus/dist/nucleus';
 
 import barchart from '@nebula.js/sn-bar-chart';
 import linechart from '@nebula.js/sn-line-chart';
+import sankeychart from '@nebula.js/sn-sankey-chart';
 
 const n = nucleus.createConfiguration({
   context: {
-    theme: 'light',
+    theme: 'dark',
     language: 'en-US',
   },
   types: [
@@ -16,6 +17,10 @@ const n = nucleus.createConfiguration({
     {
       name: 'linechart',
       load: () => Promise.resolve(linechart),
+    },
+    {
+      name: 'sankeychart',
+      load: () => Promise.resolve(sankeychart),
     },
   ],
 });
